@@ -7,7 +7,7 @@ import loaded from "../src/loaded"
 import logger from "../src/logger"
 import render from "../src/render"
 import ssr from "../src/ssr"
-import tinyId from "../src/tiny-id"
+import tinyId from "../src/tinyId"
 
 beforeEach(() => loaded.reset())
 
@@ -19,7 +19,7 @@ it("renders", () => {
     cache: Element
 
     element(): Element {
-      return this.cache || <div id={ this.id } />
+      return this.cache || <div id={this.id} />
     }
   }
 
@@ -36,7 +36,7 @@ it("renders", () => {
   })
 
   const ssrEl = <div id="myComponent" />
-    render.doc.body.appendChild(ssrEl)
+  render.doc.body.appendChild(ssrEl)
 
   const el = myComponent.element()
   const getEl = render.doc.getElementById(el.id)
