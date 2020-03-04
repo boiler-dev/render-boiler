@@ -18,7 +18,7 @@ export const generate: GenerateBoiler = async ({
       })
     }
 
-    if (name === "render.spec.ts") {
+    if (name === "render.spec.tsx") {
       actions.push({
         action: "write",
         path: join(cwdPath, "test", name),
