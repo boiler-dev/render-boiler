@@ -122,7 +122,7 @@ export class Render {
             ) {
               this.doc.addEventListener(
                 key.slice(2).toLowerCase(),
-                function(e): any {
+                function (e): any {
                   let tgt: any = e.target
                   do {
                     if (tgt[key]) {
